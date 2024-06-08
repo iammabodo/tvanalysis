@@ -5,7 +5,7 @@ library(here)
 
 tv_hrs_table <- gss_cat %>% 
   # Filter to only include those with age above 30
-  filter(age >= 30) %>%
+  filter(age < 30) %>%
   group_by(marital) %>%
   summarise(mean_tvhrs = mean(tvhours, na.rm = TRUE))
 
